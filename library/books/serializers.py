@@ -15,3 +15,7 @@ class BookSchema(Schema):
     genres: List[GenreSchema] = []
     borrowed_by: Optional[str]
     borrow_date: Optional[datetime]
+
+
+    class Config:
+        orm_mode = True
